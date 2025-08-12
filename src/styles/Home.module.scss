@@ -109,6 +109,11 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
 
+      @media(max-width:$sm) {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+      }
+
       .col {
         padding: 30px;
         text-align: center;
@@ -117,7 +122,7 @@
         background: #fff;
 
         @media(max-width:$sm) {
-          padding: 30px 20px;
+          padding: 20px;
         }
 
         .icon {
@@ -131,6 +136,12 @@
           margin: auto;
           border-radius: 50px;
           font-size: 22px;
+
+          @media(max-width:$sm) {
+            width: 54px;
+            height: 54px;
+            font-size: 18px;
+          }
         }
 
         h2 {
@@ -138,6 +149,19 @@
           font-weight: 700;
           color: $secondary;
           margin: 15px 0;
+
+          @media(max-width:$sm) {
+            font-size: 26px;
+            margin: 10px 0;
+          }
+        }
+
+        p {
+          margin: 0;
+
+          @media(max-width:$sm) {
+            font-size: 14px;
+          }
         }
       }
     }
