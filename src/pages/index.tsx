@@ -223,7 +223,7 @@ export default function Home() {
               ))}
             </div>
             <div className={styles.btn}>
-              <Link className={styles.one} href="/e">
+              <Link className={styles.one} href="/services">
                 View All Services
               </Link>
             </div>
@@ -252,7 +252,7 @@ export default function Home() {
               ))}
             </div>
             <div className={styles.btn}>
-              <Link className={styles.one} href="/e">
+              <Link className={styles.one} href="/projects">
                 View All Projects
               </Link>
             </div>
