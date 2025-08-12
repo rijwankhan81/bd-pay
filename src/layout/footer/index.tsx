@@ -6,11 +6,13 @@ import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import NextImage from "@/hooks/NextImage";
 import { navItems } from "@/constants/navMenu";
-import { usePathname } from "next/navigation";
 import { contactInfo } from "@/constants/contactinfor";
 import React from "react";
+import { useActiveSectionNav } from "@/components/useActiveSectionNav";
+import { usePathname } from "next/navigation";
 export default function Footer() {
   const pathname = usePathname();
+  const { activeSection, handleLinkClick } = useActiveSectionNav(navItems);
   return (
     <>
       <div className={styles.wrap}>
@@ -53,18 +55,29 @@ export default function Footer() {
               <div className={styles.footer_menu}>
                 <h3>Quick Links</h3>
                 <ul>
-                  {navItems.map((item) => (
-                    <li key={item.href} className={styles.navItem}>
-                      <Link
-                        href={item.href}
-                        className={`${styles.nav_link} ${
-                          pathname === item.href ? styles.active : ""
-                        }`}
-                      >
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
+                  {navItems.map((item) => {
+                    const hashPart = item.href.includes("#")
+                      ? item.href.split("#")[1]
+                      : null;
+
+                    const isActive =
+                      (hashPart && activeSection === hashPart) ||
+                      (!hashPart && pathname === item.href);
+
+                    return (
+                      <li key={item.href} className={styles.navItem}>
+                        <Link
+                          href={item.href}
+                          onClick={(e) => handleLinkClick(e, item.href)}
+                          className={`${styles.nav_link} ${
+                            isActive ? styles.active : ""
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
               <div className={styles.footer_menu}>

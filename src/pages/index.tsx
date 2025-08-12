@@ -83,7 +83,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section className={styles.about}>
+        <section id="about" className={styles.about}>
           <Container>
             <div className={styles.head}>
               <h2>About Us</h2>
@@ -208,10 +208,6 @@ export default function Home() {
           <Container>
             <div className={styles.head}>
               <h2>Our Services</h2>
-              <p>
-                Comprehensive engineering solutions for marine and industrial
-                sectors, delivered with expertise and precision.
-              </p>
             </div>
             <div className={styles.row}>
               {services.slice(0, 6).map((item) => (
@@ -238,10 +234,6 @@ export default function Home() {
           <Container>
             <div className={styles.head}>
               <h2>Our Projects</h2>
-              <p>
-                Explore our portfolio of completed projects, showcasing our
-                expertise and commitment to excellence.
-              </p>
             </div>
             <div className={styles.row}>
               {projects.slice(0, 6).map((item) => (
@@ -266,7 +258,7 @@ export default function Home() {
             </div>
           </Container>
         </section>
-        <section className={styles.clients}>
+        <section id="clients" className={styles.clients}>
           <Container>
             <div className={styles.head}>
               <h2>Our Clients & Partners</h2>
@@ -287,7 +279,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section className={styles.contact}>
+        <section id="contacts" className={styles.contact}>
           <Container>
             <div className={styles.head}>
               <h2>Contact Us</h2>
