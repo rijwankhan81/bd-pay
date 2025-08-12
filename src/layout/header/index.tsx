@@ -2,12 +2,13 @@ import Link from "next/link";
 import styles from "./header.module.scss";
 import { Container } from "react-bootstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NextImage from "@/hooks/NextImage";
 import Head from "next/head";
 import { navItems } from "@/constants/navMenu";
 import { useActiveSectionNav } from "@/components/useActiveSectionNav";
 import { usePathname } from "next/navigation";
+import router from "next/router";
 export default function Header() {
   const [show, setShow] = useState(false);
   const pathname = usePathname();
@@ -43,7 +44,11 @@ export default function Header() {
                     (!hashPart && pathname === item.href); // ✅ use pathname here
 
                   return (
-                    <li key={item.href} className={styles.navItem}>
+                    <li
+                      key={item.href}
+                      className={styles.navItem}
+                      onClick={toggleClass}
+                    >
                       <Link
                         href={item.href}
                         onClick={(e) => handleLinkClick(e, item.href)}
