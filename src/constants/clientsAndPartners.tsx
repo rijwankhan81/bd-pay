@@ -1,0 +1,86 @@
+export const clients = [
+  {
+    id: 1,
+    name: "Akij Shipping Lines Ltd.",
+    logo: "/clients/akij-shipping.jpg",
+    country: "Bangladesh",
+  },
+  {
+    id: 2,
+    name: "BSRM",
+    logo: "/clients/bsrm.jpg",
+    country: "Bangladesh",
+  },
+  {
+    id: 3,
+    name: "East Coast Shipping Lines Limited",
+    logo: "/clients/east-coast-shipping.jpg",
+    country: "Bangladesh",
+  },
+  {
+    id: 4,
+    name: "Orion Oil and Shipping Ltd.",
+    logo: "/clients/orion-oil.jpg",
+    country: "Bangladesh",
+  },
+  {
+    id: 5,
+    name: "Marine Academy, Bangladesh",
+    logo: "/clients/marine-academy.jpg",
+    country: "Bangladesh",
+  },
+  {
+    id: 6,
+    name: "Shajinaz Exim Pack Ltd.",
+    logo: "/clients/shajinaz-exim.jpg",
+    country: "Bangladesh",
+  },
+  {
+    id: 7,
+    name: "Ralex Industries Ltd.",
+    logo: "/clients/ralex-industries.jpg",
+    country: "Bangladesh",
+  },
+  {
+    id: 8,
+    name: "Bangla Mark",
+    logo: "/clients/bangla-mark.jpg",
+    country: "Bangladesh",
+  },
+  {
+    id: 9,
+    name: "Ashuganj Power Station Company Ltd.",
+    logo: "/clients/ashuganj-power.jpg",
+    country: "Bangladesh",
+  },
+  {
+    id: 10,
+    name: "Baraka Power Plant Ltd, Chittagong",
+    logo: "/clients/baraka-power.jpg",
+    country: "Bangladesh",
+  },
+  {
+    id: 11,
+    name: "Spacetech Equipments & Structurals Pvt. Ltd.",
+    logo: "/clients/spacetech.jpg",
+    country: "India",
+  },
+  {
+    id: 12,
+    name: "Liberia Maritime Training Institute (LMTI)",
+    logo: "/clients/lmti.jpg",
+    country: "Liberia",
+  },
+  {
+    id: 13,
+    name: "Singmar Marine and Offshore Pte Ltd",
+    logo: "/clients/singmar-marine.jpg",
+    country: "Singapore",
+  },
+  {
+    id: 14,
+    name: "Thome Ship Management Pte Ltd",
+    logo: "/clients/thome-ship.jpg",
+    country: "Singapore",
+  },
+];

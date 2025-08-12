@@ -1,0 +1,32 @@
+$primary: #FF6F3C;
+$secondary: #0A192A;
+$font_one: "Poppins", sans-serif;
+
+$xxxl: 1759px;
+$xxl: 1399px;
+$xl: 1199px;
+$lg: 991px;
+$md: 767px;
+$sm: 575px;
+
+
+.head {
+    padding-bottom: 30px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+
+    @media(max-width:$sm) {
+        padding-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 10px;
+
+        @media(max-width:$sm) {
+            font-size: 28px;
+        }
+    }
+}
