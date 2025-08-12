@@ -20,7 +20,7 @@ export function useActiveSectionNav(
 
   const getHeaderHeight = () => {
     const header = document.querySelector(headerSelector);
-    return header ? header.getBoundingClientRect().height : 100;
+    return header ? header.getBoundingClientRect().height : 80;
   };
 
   const attemptScrollToHash = (hash: string | null, tries = 10) => {
