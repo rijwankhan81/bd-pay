@@ -37,7 +37,7 @@ export default function Home() {
               {projects.map((item) => (
                 <div key={item.title} className={styles.col}>
                   <div className={styles.image}>
-                    <NextImage src={"/images/hm-banner.jpg"} alt={item.title} />
+                    <NextImage src={item.image} alt={item.title} />
                   </div>
                   <div className={styles.content}>
                     <h3>{item.title}</h3>

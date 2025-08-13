@@ -4,7 +4,7 @@ export const projects = [
     title: "Dust collector hood fabrication and installation at BSRM",
     description:
       "We fabricated and installed a custom dust collector hood system for BSRM, ensuring efficient dust capture and improved workplace air quality. The project included precision steelwork, on-site assembly, and performance testing for compliance with industrial safety standards.",
-    image: "/projects/hull-repair.jpg",
+    image: "/images/projects/Dust-collector.png",
     date: "2020-06-18",
   },
   {
@@ -13,7 +13,7 @@ export const projects = [
       "A successful meeting between MD and foreign client at AMESL office.",
     description:
       "Our Managing Director hosted a strategic meeting with an international client to discuss future marine engineering collaborations. The session focused on expanding service capabilities, technology integration, and strengthening long-term business relationships through mutual technical expertise.",
-    image: "/projects/diesel-engine-overhaul.jpg",
+    image: "/images/projects/successful-meeting.png",
     date: "2021-03-12",
   },
   {
@@ -21,7 +21,7 @@ export const projects = [
     title: "Fabrication work in progress at AMESL workshop",
     description:
       "Our skilled fabrication team worked on multiple heavy-duty steel components at the AMESL workshop. Using precision welding and advanced machinery, we prepared parts for upcoming marine and industrial installations, ensuring durability and exact dimensional accuracy.",
-    image: "/projects/steel-fabrication.jpg",
+    image: "/images/projects/Fabrication-work.png",
     date: "2020-11-25",
   },
   {
@@ -29,7 +29,7 @@ export const projects = [
     title: "Crane hoist maintenance",
     description:
       "We performed a complete inspection, repair, and lubrication of a high-capacity crane hoist system. This included replacing worn-out cables, adjusting load brakes, and conducting load testing to restore full operational safety and efficiency.",
-    image: "/projects/electrical-pcb-repair.jpg",
+    image: "/images/projects/Crane-hoist-maintenance.png",
     date: "2022-02-14",
   },
   {
@@ -37,7 +37,7 @@ export const projects = [
     title: "SS pipe line modification at BSRM",
     description:
       "We redesigned and modified stainless steel process pipelines at BSRM to improve flow efficiency and reduce maintenance issues. The work involved precision cutting, welding, pressure testing, and final inspection under strict industrial safety protocols.",
-    image: "/projects/marine-spares.jpg",
+    image: "/images/projects/SS-pipe-line.png",
     date: "2021-08-09",
   },
   {
@@ -46,7 +46,7 @@ export const projects = [
       "Fire hydrant system installed by AMESL at SLK LPG bottling plant at Shikalbaha",
     description:
       "Our team installed and commissioned a fully automated fire hydrant system at SLK LPG Bottling Plant. The system included PLC integration, hydrant network setup, and high-capacity pumps for maximum fire safety compliance.",
-    image: "/projects/fire-hydrant.jpg",
+    image: "/images/projects/fire-hydrant.png",
     date: "2023-04-21",
   },
   {
@@ -54,7 +54,7 @@ export const projects = [
     title: "Car turn table fabrication for Millennium Automotive Assembly Ltd",
     description:
       "We designed and fabricated a heavy-duty car turntable for Millennium Automotive Assembly Ltd. The structure allows 360-degree vehicle rotation, optimizing workflow efficiency during assembly, inspection, and display operations.",
-    image: "/projects/lifeboat-testing.jpg",
+    image: "/images/projects/Car-turn-table-fabrication.png",
     date: "2022-10-17",
   },
   {
@@ -63,7 +63,7 @@ export const projects = [
       "LPG Gas line fabrication and commissioning at SLK LPG Bottling Plant",
     description:
       "We fabricated and commissioned a complete LPG gas pipeline network at SLK LPG Bottling Plant. The project included precision welding, leak testing, and integration with storage and bottling systems for safe, efficient operations.",
-    image: "/projects/underwater-repair.jpg",
+    image: "/images/projects/LPG-Gas-line.png",
     date: "2020-09-03",
   },
   {
@@ -72,7 +72,7 @@ export const projects = [
       "Car water test booth fabrication and installation at Millennium Automotive Assembly Ltd",
     description:
       "We fabricated and installed a car water test booth to simulate real-world weather conditions. The booth allows controlled water spray testing, ensuring vehicle sealing and waterproofing meet manufacturing quality standards.",
-    image: "/projects/steel-warehouse.jpg",
+    image: "/images/projects/Car-water-test-booth.png",
     date: "2023-07-28",
   },
   {
@@ -81,7 +81,7 @@ export const projects = [
       "Electrical and Mechanical Services provided for Bangladesh Coast Guard at Chattogram Dry Dock Ltd",
     description:
       "We delivered complete electrical and mechanical servicing for a Bangladesh Coast Guard vessel at Chattogram Dry Dock. The project included generator synchronization, control panel upgrades, and mechanical alignment to ensure peak operational readiness.",
-    image: "/projects/diesel-generator.jpg",
+    image: "/images/projects/Electrical-and-Mechanical-Services.png",
     date: "2024-05-15",
   },
   {
@@ -89,7 +89,7 @@ export const projects = [
     title: "HP air compressor servicing at Orion Express (Oil Tanker)",
     description:
       "We overhauled the HP air compressor system on Orion Express, replacing worn valves, cleaning intercoolers, and conducting pressure tests. The service restored reliable air supply for starting operations and onboard pneumatic systems.",
-    image: "/projects/pressure-gauge.jpg",
+    image: "/images/projects/HP-air-compressor.png",
     date: "2021-12-05",
   },
   {
@@ -97,7 +97,7 @@ export const projects = [
     title: "700 kW 3 Phase induction motor overhauling at AMESL workshop",
     description:
       "Our engineering team dismantled, inspected, and overhauled a 700 kW 3-phase induction motor. The process included rewinding, bearing replacement, rotor balancing, and insulation testing to restore efficiency and extend service life.",
-    image: "/projects/shipbuilding-consultancy.jpg",
+    image: "/images/projects/Phase-induction-motor.png",
     date: "2024-11-19",
   },
   {
@@ -105,7 +105,7 @@ export const projects = [
     title: "Calibration & inspection of CON rod at AMESL workshop",
     description:
       "We carried out precision calibration and inspection of connecting rods at our workshop, using advanced measurement tools to ensure perfect alignment and tolerance levels for optimal engine performance and longevity.",
-    image: "/projects/shipbuilding-consultancy.jpg",
+    image: "/images/projects/inspection.png",
     date: "2024-12-20",
   },
   {
@@ -113,7 +113,7 @@ export const projects = [
     title: "Fabrication of Mezzanine Platform at BSRM",
     description:
       "We designed, fabricated, and installed a structural steel mezzanine platform for BSRM’s facility. The platform was built to handle heavy loads while maximizing floor space for additional storage and operational activities.",
-    image: "/projects/shipbuilding-consultancy.jpg",
+    image: "/images/projects/Fabrication-of-Mezzanine.png",
     date: "2024-12-28",
   },
 ];

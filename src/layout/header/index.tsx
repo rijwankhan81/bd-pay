@@ -64,8 +64,8 @@ export default function Header() {
               </ul>
               <div className={styles.btns}>
                 <div className={styles.btn}>
-                  <Link className={styles.navLink} href="/e">
-                    Request a Quote
+                  <Link className={styles.navLink} href="/#contacts">
+                    Contact Us
                   </Link>
                 </div>
                 <div className={styles.hamMenu} onClick={toggleClass}>
