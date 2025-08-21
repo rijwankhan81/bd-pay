@@ -11,25 +11,44 @@
     background-image: url(/images/hm-banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, $primary, $color_three);
+      opacity: 0.9;
+    }
 
     .wrap {
-      padding: 170px 0;
-      background: #002147ad;
+      padding-top: 100px;
+      padding-bottom: 170px;
+      background-image: url(/images/wave.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      position: relative;
+      z-index: 1;
 
       @media(max-width:$lg) {
-        padding: 120px 0;
+        padding-top: 80px;
+        padding-bottom: 120px;
       }
 
       @media(max-width:$md) {
-        padding: 90px 0;
+        padding-top: 70px;
+        padding-bottom: 100px;
       }
 
-      @media(max-width:$sm) {
-        padding: 70px 0;
-      }
 
       .content {
         max-width: 950px;
+        margin: auto;
+        text-align: center;
 
         h1 {
           font-size: 60px;
@@ -53,13 +72,22 @@
         .btns {
           display: flex;
           align-items: center;
+          justify-content: center;
           gap: 15px;
 
           a {
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 10px 30px;
             border-radius: 30px;
             font-weight: 500;
+            display: flex;
+            align-items: center;
+
+            svg {
+              padding-right: 5px;
+              flex: 1;
+              font-size: 24px;
+            }
 
             @media(max-width:$lg) {
               font-size: 14px;
@@ -67,33 +95,25 @@
             }
           }
 
-          .one {
+          .two {
             background: $primary;
             color: #fff;
+
           }
 
-          .two {
-            color: #fff;
-            background: transparent;
-            border: 2px solid #fff;
+          .one {
+            color: $primary;
+            background: #fff;
           }
         }
       }
     }
   }
 
-  .stats {
+  .whyChoose {
     padding: 100px 0;
     position: relative;
-
-    .bg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    background: #F9FAFB;
 
     @media(max-width:$sm) {
       padding: 50px 0;
@@ -109,15 +129,10 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
 
-      @media(max-width:$sm) {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 15px;
-      }
-
       .col {
         padding: 30px;
         text-align: center;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         border-radius: 10px;
         background: #fff;
 
@@ -131,8 +146,8 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #E5E9ED;
-          color: $secondary;
+          background: linear-gradient(45deg, $primary, $color_three);
+          color: #fff;
           margin: auto;
           border-radius: 50px;
           font-size: 22px;
@@ -145,9 +160,9 @@
         }
 
         h2 {
-          font-size: 36px;
+          font-size: 18px;
           font-weight: 700;
-          color: $secondary;
+          color: #000;
           margin: 15px 0;
 
           @media(max-width:$sm) {
@@ -167,9 +182,8 @@
     }
   }
 
-  .values {
+  .getStarted {
     padding: 70px 0;
-    background: #f4faff;
 
     @media(max-width:$sm) {
       padding: 50px 0;
@@ -178,12 +192,12 @@
     .row {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 40px;
 
       .col {
         padding: 30px;
         text-align: center;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
         border-radius: 10px;
         background: #fff;
 
@@ -197,7 +211,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background: $primary;
+          background: linear-gradient(45deg, $primary, $color_three);
           color: #fff;
           margin: auto;
           border-radius: 50px;
@@ -206,16 +220,318 @@
 
         h3 {
           font-size: 20px;
-          font-weight: 500;
-          color: $secondary;
+          font-weight: 600;
+          color: #000;
           margin: 15px 0;
+        }
+
+        .icons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          svg {
+            color: #4B5563;
+            font-size: 28px;
+          }
         }
       }
     }
   }
 
-  .about {
+  .paymentPartner {
     padding: 70px 0;
+    background: #F9FAFB;
+
+    @media(max-width:$sm) {
+      padding: 50px 0;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 50px;
+
+
+      @media(max-width:$lg) {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+      }
+
+      @media(max-width:$sm) {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .image {
+        padding: 20px 0;
+        background: #E8FFEE;
+        text-align: center;
+
+        img {
+          width: 100%;
+          max-width: 230px;
+          height: auto;
+          border-radius: 8px;
+        }
+      }
+
+      .content {
+        h2 {
+          display: flex;
+          gap: 10px;
+          font-size: 36px;
+          font-weight: 900;
+
+          @media(max-width:$sm) {
+            font-size: 28px;
+          }
+
+          svg {
+            color: $color_three;
+          }
+        }
+
+        ul {
+          list-style: none;
+          padding-top: 20px;
+
+          li {
+            display: flex;
+            gap: 10px;
+            padding-bottom: 20px;
+
+            .icon {
+              width: 64px;
+              height: 64px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: #E8FFEE;
+              color: $primary;
+              border-radius: 50px;
+              font-size: 22px;
+            }
+
+            .text {
+              flex: 1;
+            }
+
+            h3 {
+              font-size: 18px;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .btn {
+          padding-top: 20px;
+
+          .one {
+            background: linear-gradient(45deg, $primary, $color_three);
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-weight: 500;
+            display: inline-block;
+
+            @media(max-width:$lg) {
+              font-size: 14px;
+              padding: 8px 20px;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .growBusiness {
+    padding: 70px 0;
+
+    @media(max-width:$sm) {
+      padding: 50px 0;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 50px;
+
+      @media(max-width:$md) {
+        gap: 30px;
+      }
+
+      @media(max-width:$sm) {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .image {
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+
+      .content {
+        h2 {
+          display: flex;
+          gap: 10px;
+          font-size: 36px;
+          font-weight: 900;
+
+          @media(max-width:$sm) {
+            font-size: 28px;
+          }
+
+          svg {
+            color: $color_four;
+          }
+        }
+
+        ul {
+          list-style: none;
+          padding-top: 20px;
+
+          li {
+            display: flex;
+            gap: 10px;
+            padding-bottom: 20px;
+
+            .icon {
+              width: 64px;
+              height: 64px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: #FFD0D6;
+              color: $color_four;
+              border-radius: 50px;
+              font-size: 22px;
+            }
+
+            .text {
+              flex: 1;
+            }
+
+            h3 {
+              font-size: 18px;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .btn {
+          padding-top: 20px;
+
+          .one {
+            background: linear-gradient(45deg, $secondary, $color_four);
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-weight: 500;
+            display: inline-block;
+
+            @media(max-width:$lg) {
+              font-size: 14px;
+              padding: 8px 20px;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .security {
+    padding: 100px 0;
+    position: relative;
+    background: $color_four;
+
+    @media(max-width:$sm) {
+      padding: 50px 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+
+      .head {
+        color: #fff;
+      }
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+
+      .col {
+        padding: 30px;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        border-radius: 10px;
+        background: #FFD0D6;
+
+        @media(max-width:$sm) {
+          padding: 20px;
+        }
+
+        .icon {
+          width: 64px;
+          height: 64px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(45deg, $secondary, $color_four);
+          color: #fff;
+          margin: auto;
+          border-radius: 50px;
+          font-size: 22px;
+
+          @media(max-width:$sm) {
+            width: 54px;
+            height: 54px;
+            font-size: 18px;
+          }
+        }
+
+        h2 {
+          font-size: 18px;
+          font-weight: 700;
+          color: #000;
+          margin: 15px 0;
+
+          @media(max-width:$sm) {
+            font-size: 26px;
+            margin: 10px 0;
+          }
+        }
+
+        p {
+          margin: 0;
+
+          @media(max-width:$sm) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .getApp {
+    padding: 70px 0;
+    background: linear-gradient(45deg, $primary, $color_three);
 
     @media(max-width:$sm) {
       padding: 50px 0;
@@ -225,10 +541,11 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       align-items: center;
-      gap: 20px;
+      gap: 50px;
 
-      @media(max-width:$md) {
+      @media(max-width:$lg) {
         text-align: center;
+        gap: 30px;
       }
 
       @media(max-width:$sm) {
@@ -236,405 +553,69 @@
       }
 
       .image {
-        img {
+        padding: 20px 0;
+        text-align: center;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
           width: 100%;
+          height: 200px;
+          background: #01A359;
+          border-radius: 10px;
+          transform: translateY(-50%);
+        }
+
+        img {
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          max-width: 230px;
           height: auto;
           border-radius: 8px;
         }
       }
 
-    }
-
-    .rowTwo {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding-top: 50px;
-
-      .col {
-        padding: 30px;
-        background: #fff;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        border-radius: 10px;
-        border-top: 4px solid $primary;
-
-        @media(max-width:$sm) {
-          text-align: center;
-        }
-
-        h3 {
-          font-size: 20px;
-          font-weight: 600;
-        }
-      }
-    }
-
-    .message {
-      margin-top: 50px;
-      background: #f4faff;
-      padding: 30px;
-      border-radius: 10px;
-      display: flex;
-      gap: 20px;
-
-      @media(max-width:$md) {
-        flex-direction: column;
-      }
-
-      @media(max-width:$sm) {
-        padding: 20px;
-      }
-
-      .image {
-        img {
-          width: 200px;
-          height: 200px;
-          object-fit: cover;
-          border-radius: 200px;
-
-          @media(max-width:$sm) {
-            width: 150px;
-            height: 150px;
-          }
-        }
-      }
-
       .content {
-        h3 {
-          font-size: 24px;
-
-          @media(max-width:$sm) {
-            font-size: 18px;
-          }
-        }
-
-        p {
-          font-style: italic;
-        }
-      }
-    }
-  }
-
-  .services {
-    padding: 70px 0;
-    background: #f4faff;
-
-    @media(max-width:$sm) {
-      padding: 50px 0;
-    }
-
-    .row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-
-      .col {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        border-radius: 10px;
-        overflow: hidden;
-        background: #fff;
-
-        @media(max-width:$sm) {
-          text-align: center;
-        }
-
-
-        .image {
-          img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-          }
-        }
-
-        .content {
-          padding: 20px;
-        }
-
-        h3 {
-          font-size: 18px;
-          line-height: 28px;
-          font-weight: 600;
-          color: $secondary;
-          margin-bottom: 15px;
-        }
-
-        p {
-          margin: 0;
-        }
-      }
-    }
-
-    .btn {
-      padding-top: 20px;
-      text-align: center;
-
-      .one {
-        background: $primary;
         color: #fff;
-        text-decoration: none;
-        padding: 10px 30px;
-        border-radius: 30px;
-        font-weight: 500;
-        display: inline-block;
 
-        @media(max-width:$lg) {
-          font-size: 14px;
-          padding: 8px 20px;
-        }
-      }
-    }
-  }
+        .icon {
+          padding-bottom: 20px;
 
-
-  .projects {
-    padding: 70px 0;
-
-    @media(max-width:$sm) {
-      padding: 50px 0;
-    }
-
-    .row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-
-      .col {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        border-radius: 10px;
-        overflow: hidden;
-
-        @media(max-width:$sm) {
-          text-align: center;
-        }
-
-
-        .image {
-          img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            object-position: top;
+          svg {
+            font-size: 48px;
           }
         }
 
-        .content {
-          padding: 20px;
-
-          .date {
-            font-size: 16px;
-            margin: 0;
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-          }
-        }
-
-        h3 {
-          font-size: 18px;
-          line-height: 28px;
-          font-weight: 600;
-          color: $secondary;
-          margin-bottom: 15px;
-        }
-
-        p {
-          margin: 0;
-        }
-      }
-    }
-
-    .btn {
-      padding-top: 20px;
-      text-align: center;
-
-      .one {
-        background: $primary;
-        color: #fff;
-        text-decoration: none;
-        padding: 10px 30px;
-        border-radius: 30px;
-        font-weight: 500;
-        display: inline-block;
-
-        @media(max-width:$lg) {
-          font-size: 14px;
-          padding: 8px 20px;
-        }
-      }
-    }
-  }
-
-  .clients {
-    padding: 70px 0;
-    background: #f4faff;
-
-    @media(max-width:$sm) {
-      padding: 50px 0;
-    }
-
-    .row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-
-      @media(max-width:$sm) {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
-      }
-
-      .col {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        border-radius: 10px;
-        overflow: hidden;
-        background: #fff;
-
-        @media(max-width:$sm) {
-          text-align: center;
-        }
-
-
-        .image {
-          padding: 10px;
-          text-align: center;
-
-          img {
-            width: 100%;
-            height: 100px;
-            object-fit: contain;
-            border-radius: 8px;
-          }
-        }
-      }
-    }
-
-  }
-
-  .contact {
-    padding: 100px 0;
-
-    @media(max-width:$sm) {
-      padding: 70px 0;
-    }
-
-    .row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 40px;
-
-
-
-      @media(max-width:$sm) {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-      }
-
-      .form {
-        form {
-          padding: 30px;
-          border-radius: 10px;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        h2 {
           display: flex;
-          flex-direction: column;
-          gap: 20px;
-
-          label {
-            display: inline-block;
-            padding-bottom: 5px;
-          }
-
-          input {
-            width: 100%;
-            height: 50px;
-            border: 1px solid #D1D5DB;
-            border-radius: 8px;
-            padding: 8px 10px;
-          }
-
-          textarea {
-            width: 100%;
-            height: 100px;
-            border: 1px solid #D1D5DB;
-            border-radius: 8px;
-            padding: 8px 10px;
-          }
-
-          .btn {
-            text-align: center;
-
-            button {
-              width: 100%;
-              background: $primary;
-              border: none;
-              padding: 10px 30px;
-              color: #fff;
-              border-radius: 50px;
-            }
-          }
-        }
-      }
-
-      .contactInfo {
-        .us {
-          padding: 30px;
-          background: #f4faff;
-          border-radius: 10px;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
-          @media(max-width:$sm) {
-            padding: 20px;
-          }
-
-          h3 {
-            font-size: 20px;
-            font-weight: 600;
-          }
-
-          ul {
-            list-style: none;
-
-            li {
-              padding: 7px 0;
-              display: flex;
-              align-items: center;
-              gap: 10px;
-
-              .icon {
-                width: 50px;
-                height: 50px;
-                border-radius: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: #def0ff;
-                color: $secondary;
-              }
-
-              .text {
-                flex: 1;
-
-                @media(max-width:$sm) {
-                  font-size: 14px;
-                }
-              }
-
-              a {
-                color: #000;
-                text-decoration: none;
-              }
-            }
-          }
+          gap: 10px;
+          font-size: 36px;
+          font-weight: 900;
+          margin-bottom: 20px;
         }
 
-        .map {
+
+
+        .btn {
           padding-top: 20px;
-          border-radius: 8px;
-          overflow: hidden;
+          display: flex;
+          gap: 15px;
 
-          iframe {
-            width: 100%;
-            height: 200px;
+          @media(max-width:$lg) {
+            justify-content: center;
+          }
+
+          .one {
+            display: inline-block;
+
+            img {
+              width: auto;
+              height: 60px;
+            }
           }
         }
       }

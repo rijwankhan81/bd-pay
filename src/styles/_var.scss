@@ -1,5 +1,7 @@
-$primary: #FF6F3C;
-$secondary: #0A192A;
+$primary: #142918;
+$secondary: #E81E22;
+$color_three: #155F28;
+$color_four: #781115;
 $font_one: "Poppins", sans-serif;
 
 $xxxl: 1759px;
@@ -22,7 +24,7 @@ $sm: 575px;
 
     h2 {
         font-size: 36px;
-        font-weight: 700;
+        font-weight: 900;
         margin-bottom: 10px;
 
         @media(max-width:$sm) {

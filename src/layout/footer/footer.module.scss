@@ -3,7 +3,7 @@
 .footer {
     padding-top: 80px;
     color: #fff;
-    background-color: $secondary;
+    background-color: #000;
     position: relative;
 
 
@@ -62,8 +62,12 @@
                 img {
                     width: 100px;
                     height: 100px;
-                    border-radius: 100px;
+
                 }
+            }
+
+            p {
+                color: #9CA3AF;
             }
 
             .location {
@@ -91,7 +95,7 @@
 
                     a {
                         text-decoration: none;
-                        color: #fff;
+                        color: #9CA3AF;
                         font-size: 16px;
                         font-weight: 400;
 
@@ -114,11 +118,15 @@
                     gap: 10px;
 
                     .icon {
-                        color: $primary;
+                        color: #9CA3AF;
+                    }
+
+                    span {
+                        color: #9CA3AF;
                     }
 
                     a {
-                        color: #fff;
+                        color: #9CA3AF;
                         text-decoration: none;
                     }
                 }
@@ -136,7 +144,7 @@
                 gap: 20px;
 
                 a {
-                    color: #fff;
+                    color: #9CA3AF;
                     text-decoration: none;
                     font-size: 24px;
                 }
@@ -172,6 +180,7 @@
         .copyright {
             font-size: 18px;
             font-weight: 600;
+            color: #9CA3AF;
 
             @media (max-width: $md) {
                 font-size: 16px;
@@ -225,7 +234,7 @@
 
         a {
             text-decoration: none;
-            color: #fff;
+            color: #9CA3AF;
 
             &:hover {
                 color: $primary;
@@ -234,50 +243,4 @@
     }
 
 
-}
-
-.wrap {
-    position: relative;
-    padding-top: 150px;
-
-    @media (max-width: $sm) {
-        padding-top: 70px;
-    }
-
-    .waves>use {
-        animation: move-forever 5s -5s linear infinite;
-    }
-
-    .waves>use:nth-child(2) {
-        animation-delay: -3s;
-        animation-duration: 9s;
-    }
-
-    .waves>use:nth-child(3) {
-        animation-delay: -4s;
-        animation-duration: 6s;
-    }
-
-    @keyframes move-forever {
-        0% {
-            transform: translate(-90px, 0%);
-        }
-
-        100% {
-            transform: translate(85px, 0%);
-        }
-    }
-
-    .wavesSvg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 150px;
-        max-height: 200px;
-
-        @media (max-width: $sm) {
-            height: 70px;
-        }
-    }
 }

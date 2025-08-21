@@ -8,26 +8,19 @@ import {
 export const contactInfo = [
   {
     title: "Address:",
-    value: [
-      "24, Halishahar H/E, R#01, Block-H, Halishahar, Chattogram-4216, Bangladesh",
-    ],
+    value: ["2123 Digital Plaza, Dhaka, Bangladesh"],
     icon: <FaMapMarkerAlt />,
   },
   {
-    title: "Email:",
-    value: ["info@amesl.com.bd", "sales@amesl.com.bd"],
-    icon: <FaEnvelope />,
-    linkType: "email",
-  },
-  {
     title: "Phone:",
-    value: ["+8801712345678", "+8801768147636"],
+    value: ["+880 196 995 9999"],
     icon: <FaPhoneAlt />,
     linkType: "phone",
   },
   {
-    title: "Timing:",
-    value: ["Mon - Fri: 9:00 AM - 6:00 PM"],
-    icon: <FaClock />,
+    title: "Email:",
+    value: ["support@bdpay.com"],
+    icon: <FaEnvelope />,
+    linkType: "email",
   },
 ];

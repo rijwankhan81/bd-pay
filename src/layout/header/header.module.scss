@@ -36,7 +36,6 @@
             img {
                 width: 80px;
                 height: 80px;
-                border-radius: 100%;
 
                 @media(max-width:$md) {
                     width: 50px;
@@ -74,12 +73,12 @@
 
                 .navLink {
                     text-decoration: none;
-                    color: $secondary;
+                    color: $primary;
                     font-weight: 500;
                 }
 
                 .active {
-                    color: $primary;
+                    color: $secondary;
                 }
             }
         }

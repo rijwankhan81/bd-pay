@@ -2,13 +2,12 @@ import Link from "next/link";
 import styles from "./header.module.scss";
 import { Container } from "react-bootstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import NextImage from "@/hooks/NextImage";
 import Head from "next/head";
 import { navItems } from "@/constants/navMenu";
 import { useActiveSectionNav } from "@/components/useActiveSectionNav";
 import { usePathname } from "next/navigation";
-import router from "next/router";
 export default function Header() {
   const [show, setShow] = useState(false);
   const pathname = usePathname();
@@ -22,7 +21,7 @@ export default function Header() {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/images/logo.png" />
+        <link rel="icon" href="/images/logo.svg" />
       </Head>
       <header id="header" className={styles.header}>
         <div className={styles.wrapper}>
@@ -30,7 +29,7 @@ export default function Header() {
             <div className={styles.nav}>
               <div className={styles.logo}>
                 <Link className={styles.navLink} href="/">
-                  <NextImage src={"/images/logo.png"} alt={""} />
+                  <NextImage src={"/images/logo.svg"} alt={""} />
                 </Link>
               </div>
               <ul className={`${show ? styles.show : ""} ${styles.menu}`}>
@@ -65,7 +64,7 @@ export default function Header() {
               <div className={styles.btns}>
                 <div className={styles.btn}>
                   <Link className={styles.navLink} href="/#contacts">
-                    Contact Us
+                    EN | বাংলা
                   </Link>
                 </div>
                 <div className={styles.hamMenu} onClick={toggleClass}>
