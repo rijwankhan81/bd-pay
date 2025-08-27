@@ -5,22 +5,40 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import NextImage from "@/hooks/NextImage";
 import Head from "next/head";
-import { navItems } from "@/constants/navMenu";
+import { navItemsBN, navItemsEN } from "@/constants/navMenu";
 import { useActiveSectionNav } from "@/components/useActiveSectionNav";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "@/modules/languageSwitch";
+import useLanguage from "@/hooks/useLanguage";
+import { useTranslation } from "next-i18next";
 export default function Header() {
   const [show, setShow] = useState(false);
   const pathname = usePathname();
+
+  const { i18n } = useTranslation();
+  const selectedLanguage = i18n.language;
+
+  // ✅ Pick correct navItems based on language
+  const navItems = selectedLanguage === "en" ? navItemsEN : navItemsBN;
+
+  // ✅ Pass navItems AFTER it's defined
   const { activeSection, handleLinkClick } = useActiveSectionNav(navItems);
 
   const toggleClass = () => {
     setShow((prevState) => !prevState);
   };
 
+  const isClient = useLanguage();
+  if (!isClient) return null;
+
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Bangladesh's next-generation digital payment gateway — fast, secure, and built for everyone. Send money, pay bills, shop online, and grow your business — all in one app"
+        />
         <link rel="icon" href="/images/logo.svg" />
       </Head>
       <header id="header" className={styles.header}>
@@ -40,7 +58,7 @@ export default function Header() {
 
                   const isActive =
                     (hashPart && activeSection === hashPart) ||
-                    (!hashPart && pathname === item.href); // ✅ use pathname here
+                    (!hashPart && pathname === item.href);
 
                   return (
                     <li
@@ -62,11 +80,7 @@ export default function Header() {
                 })}
               </ul>
               <div className={styles.btns}>
-                <div className={styles.btn}>
-                  <Link className={styles.navLink} href="/#contacts">
-                    EN | বাংলা
-                  </Link>
-                </div>
+                <LanguageSwitcher />
                 <div className={styles.hamMenu} onClick={toggleClass}>
                   <GiHamburgerMenu />
                 </div>

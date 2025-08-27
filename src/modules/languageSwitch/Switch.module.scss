@@ -1,0 +1,26 @@
+@use "/src/styles/var" as *;
+
+.languageSwitcher {
+    width: max-content;
+    margin-left: auto;
+    border: 2px solid $primary;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .langTag {
+        padding: 5px 15px;
+        cursor: pointer;
+
+        @media(max-width:$sm) {
+            font-size: 14px;
+            padding: 4px 10px;
+        }
+    }
+
+    .active {
+        background: $primary;
+        color: #fff;
+    }
+}

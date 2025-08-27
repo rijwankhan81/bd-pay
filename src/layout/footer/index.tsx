@@ -5,14 +5,29 @@ import { FiFacebook } from "react-icons/fi";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import NextImage from "@/hooks/NextImage";
-import { navItems } from "@/constants/navMenu";
+import { navItemsBN, navItemsEN } from "@/constants/navMenu";
 import { contactInfo } from "@/constants/contactinfor";
 import React from "react";
 import { useActiveSectionNav } from "@/components/useActiveSectionNav";
 import { usePathname } from "next/navigation";
+import useLanguage from "@/hooks/useLanguage";
+import { useTranslation } from "next-i18next";
+import { footerNavBN, footerNavEN } from "@/constants/footerNav";
 export default function Footer() {
   const pathname = usePathname();
+
+  const { i18n, t } = useTranslation();
+  const selectedLanguage = i18n.language;
+
+  // ✅ Pick correct navItems based on language
+  const navItems = selectedLanguage === "en" ? navItemsEN : navItemsBN;
+  const footerNav = selectedLanguage === "en" ? footerNavEN : footerNavBN;
+
+  // ✅ Pass navItems AFTER it's defined
   const { activeSection, handleLinkClick } = useActiveSectionNav(navItems);
+
+  const isClient = useLanguage();
+  if (!isClient) return null;
   return (
     <>
       <footer className={styles.footer}>
@@ -22,10 +37,7 @@ export default function Footer() {
               <Link className={styles.logo} href="/">
                 <NextImage src="/images/logo-footer.svg" alt="" />
               </Link>
-              <p>
-                Bangladesh's next-generation digital payment gateway — fast,
-                secure, and built for everyone.
-              </p>
+              <p>{t("Footer Title")}</p>
               <div className={styles.connect}>
                 <ul>
                   <li>
@@ -52,7 +64,7 @@ export default function Footer() {
               </div>
             </div>
             <div className={styles.footer_menu}>
-              <h3>Quick Links</h3>
+              <h3>{t("Quick Links")}</h3>
               <ul>
                 {navItems.map((item) => {
                   const hashPart = item.href.includes("#")
@@ -80,27 +92,35 @@ export default function Footer() {
               </ul>
             </div>
             <div className={styles.footer_menu}>
-              <h3>For Business</h3>
+              <h3>{t("For Business")}</h3>
               <ul>
-                <li>
-                  <Link href="javascript:void(0)">Merchant Solutions</Link>
-                </li>
-                <li>
-                  <Link href="javascript:void(0)">Payment Gateway</Link>
-                </li>
-                <li>
-                  <Link href="javascript:void(0)">API Documentation</Link>
-                </li>
-                <li>
-                  <Link href="javascript:void(0)">Business Dashboard</Link>
-                </li>
-                <li>
-                  <Link href="javascript:void(0)">Partner Program</Link>
-                </li>
+                {footerNav.map((item) => {
+                  const hashPart = item.href.includes("#")
+                    ? item.href.split("#")[1]
+                    : null;
+
+                  const isActive =
+                    (hashPart && activeSection === hashPart) ||
+                    (!hashPart && pathname === item.href);
+
+                  return (
+                    <li key={item.href} className={styles.navItem}>
+                      <Link
+                        href={item.href}
+                        onClick={(e) => handleLinkClick(e, item.href)}
+                        className={`${styles.nav_link} ${
+                          isActive ? styles.active : ""
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div className={styles.contactInfo}>
-              <h3>Contact Info</h3>
+              <h3>{t("Contact Info")}</h3>
               <ul>
                 {contactInfo.map((field, index) => (
                   <li key={index}>
