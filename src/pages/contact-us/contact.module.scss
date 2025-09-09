@@ -1,0 +1,290 @@
+@use '/src/styles/var' as *;
+
+.main {
+    padding-top: 95px;
+
+    @media(max-width:$md) {
+        padding-top: 60px;
+    }
+
+    .banner {
+        background-image: url(/images/ab-banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background: linear-gradient(180deg, $secondary, $primary);
+
+
+        .wrap {
+            padding: 70px 0;
+            position: relative;
+            z-index: 1;
+
+            @media(max-width:$lg) {
+                padding: 60px 0;
+            }
+
+            @media(max-width:$md) {
+                padding: 50px 0;
+            }
+
+
+            .content {
+                max-width: 950px;
+                margin: auto;
+                text-align: center;
+
+                h1 {
+                    font-size: 60px;
+                    font-weight: 700;
+                    color: #fff;
+
+                    @media(max-width:$sm) {
+                        font-size: 40px;
+                    }
+
+                    span {
+                        color: $primary;
+                    }
+                }
+
+                p {
+                    color: #fff;
+                    margin: 30px 0;
+                }
+
+
+            }
+        }
+    }
+
+    .contact {
+        padding: 70px 0;
+
+        @media(max-width:$sm) {
+            padding: 30px 0;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+
+            @media(max-width:$lg) {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            @media(max-width:$sm) {
+                grid-template-columns: 1fr;
+            }
+
+
+            .wrapper {
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                overflow: hidden;
+                position: relative;
+                border-radius: 70px;
+                padding: 30px 15px;
+                border-left: 5px solid $color_four;
+                border-right: 5px solid $color_four;
+            }
+
+
+            .content {
+                padding-top: 20px;
+                text-align: center;
+
+                h3 {
+                    color: #000;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+
+                    @media(max-width:$md) {
+                        font-size: 16px;
+                    }
+                }
+
+                span {
+                    color: #8a899d;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #8a899d;
+                }
+
+            }
+
+            .icon {
+                width: 70px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(180deg, $secondary, $color_four);
+                margin: auto;
+                border-radius: 30px;
+
+                svg {
+
+                    color: #fff;
+                    font-size: 22px;
+                }
+            }
+
+        }
+    }
+
+
+    .supporttype {
+        padding: 70px 0;
+        background: #F9FAFB;
+
+        @media(max-width:$sm) {
+            padding: 50px 0;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+
+            .col {
+                padding: 30px;
+                text-align: center;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                border-radius: 70px;
+                background: #fff;
+
+                @media(max-width:$sm) {
+                    padding: 30px 20px;
+                }
+
+                .icon {
+                    width: 64px;
+                    height: 64px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: linear-gradient(45deg, $primary, $color_three);
+                    color: #fff;
+                    margin: auto;
+                    border-radius: 25px;
+                    font-size: 22px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000;
+                    margin: 15px 0;
+                }
+
+                .icons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    svg {
+                        color: #4B5563;
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .security {
+        padding: 100px 0;
+        position: relative;
+        background: $color_four;
+
+        @media(max-width:$sm) {
+            padding: 50px 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+
+            .head {
+                color: #fff;
+
+                h2 {
+
+                    svg {
+                        display: block;
+                        margin: auto;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+
+            .col {
+                padding: 30px;
+                text-align: center;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                border-radius: 10px;
+                background: #FFD0D6;
+
+                @media(max-width:$sm) {
+                    padding: 20px;
+                }
+
+                .icon {
+                    width: 64px;
+                    height: 64px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: linear-gradient(45deg, $secondary, $color_four);
+                    color: #fff;
+                    margin: auto;
+                    border-radius: 50px;
+                    font-size: 22px;
+
+                    @media(max-width:$sm) {
+                        width: 54px;
+                        height: 54px;
+                        font-size: 18px;
+                    }
+                }
+
+                h2 {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #000;
+                    margin: 15px 0;
+
+                    @media(max-width:$sm) {
+                        font-size: 26px;
+                        margin: 10px 0;
+                    }
+                }
+
+                p {
+                    margin: 0;
+
+                    @media(max-width:$sm) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
